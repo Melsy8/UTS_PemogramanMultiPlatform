@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:perpus/ui/login_page.dart';
-import 'package:perpus/ui/databuku_page.dart';
+import 'package:perpus/ui/buku_page.dart';
 import 'package:perpus/ui/profile_page.dart';
 
 class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
-    int crossAxisCount = 3;
+    int crossAxisCount = 4;
 
     if (screenWidth <= 600) {
       crossAxisCount = 2;
     } else if (screenWidth <= 1200) {
-      crossAxisCount = 2;
+      crossAxisCount = 4;
     } else {
-      crossAxisCount = 3; 
+      crossAxisCount = 4; 
     }
 
     return Scaffold(
@@ -25,7 +25,7 @@ class DashboardPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: 100),
+            SizedBox(height: 70),
             Center(
               child: Text(
                 'Selamat datang, Admin!',
@@ -63,6 +63,7 @@ class DashboardPage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
+        color: Colors.blue,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
